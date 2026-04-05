@@ -1,0 +1,14 @@
+[Unit]
+Description=Apply TAS2781 speaker bypass at boot
+After=local-fs.target systemd-modules-load.service
+ConditionPathExists=/usr/local/lib/tas2781-bypass/tas2781-bypass-apply.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/lib/tas2781-bypass/tas2781-bypass-apply.sh --boot
+TimeoutStartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
