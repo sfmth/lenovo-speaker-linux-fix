@@ -1,4 +1,4 @@
-# TAS2781 Bypass
+# Fix not working speakers on some lenovo laptops (TAS2781 Bypass)
 
 Run the runtime test first:
 
